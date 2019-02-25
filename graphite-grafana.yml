@@ -5,7 +5,7 @@
 
   pre_tasks:
     - name: apt-get update
-      apt: update_cache=yes
+      apt: update_cache=yes 
 
   roles:
     - role: nginx
@@ -49,7 +49,7 @@
       apt: update_cache=yes
 
     - name: "install grafana"
-      apt: name=grafana state=present
+      apt: name=grafana state=present force=yes
 
     - name: "autostart grafana-server"
       service: name=grafana-server enabled=yes
