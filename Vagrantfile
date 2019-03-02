@@ -24,7 +24,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		vb.customize ["modifyvm", :id, "--cpus", "2"]
 	end
 
-
 	config.vm.provision :ansible do |ansible|
 		ansible.playbook = "site.yml"
 		ansible.groups = {
